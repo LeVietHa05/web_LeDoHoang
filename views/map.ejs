@@ -1,0 +1,86 @@
+<%- include('./partials/header.ejs') %>
+<div class="map-header bg-yellow">BẢN ĐỒ ATM</div>
+<div class="map-search-bar">
+  <div class="row">
+    <div class="col-3">
+      <div class="map-search-box row mr-20">
+        <i class="p-20 c-yellow fa-solid fa-bars"></i>
+        <input type="text" placeholder="Tìm kiếm trên google map " />
+        <i class="pos-re p-20 c-yellow fa-solid fa-magnifying-glass grow"></i>
+        <i class="p-20 c-yellow fa-solid fa-route grow"></i>
+      </div>
+    </div>
+    <div class="map-btn col-3 bg-gray mr-20 grow">
+      CÁC ĐỊA CHỈ ATM NHẬN TÌNH NGUYỆN VIÊN
+    </div>
+    <div class="map-btn col-3 bg-gray mr-20 grow">
+      CÁC ĐỊA CHỈ ATM PHÁT TỪ THIỆN
+    </div>
+  </div>
+</div>
+<div class="map p-20 m-a w-60">
+  <div class="map-content">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7839.158894184144!2d106.67041586977537!3d10.76685920000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1fa0ad7879%3A0x45b2d28fa88619ec!2sHappy%20Saigonese!5e0!3m2!1svi!2s!4v1661156329251!5m2!1svi!2s"
+      width="100%"
+      height="600"
+      style="border: 0"
+      allowfullscreen="true"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <div class="map-icon grow"></div>
+    <div class="map-icon grow"></div>
+  </div>
+  <div class="map-note"></div>
+</div>
+<div class="map-popup pos-re">
+  <div class="map-modal w-60">
+    <div class="map-modal-header pos-re c-yellow d-flex">
+      Làng Tre - Cẩm Mỹ - Đồng Nai
+      <div class="map-modal-exit grow">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="map-modal-content">
+      <div class="map-modal-text mb-30">
+        Làng Tre - Khu vực Cầu Khỉ Khô, Cẩm Mỹ, Đồng Nai - nơi cưu mang những
+        mảnh đời bất hạnh, những cụ già không nơi nương tựa, những người bệnh
+        tật, những trẻ em mồ côi <br />
+
+        Đường đi đến Làng Tre: từ TpHCM -> ngã ba Dầu Giây -> ... <br />
+        Thông tin liên lạc: <br />
+        Thầy Thích Chiếu Bổn, số điện thoại: 0912345678
+      </div>
+      <div class="map-modal-img mb-30">
+        <img src="/img/map-modal-img.png" alt="" />
+      </div>
+      <div class="map-modal-news">
+        <div class="map-modal-news-header c-yellow">Tin liên quan:</div>
+        <ul>
+          <li>Chùa Diệu Pháp - Long Thành - Đồng Nai - 22/04/2013 22:40</li>
+          <li>Mái ấm Linh Quang - Xuân Lộc - Đồng Nai - 22/04/2013 21:57</li>
+          <li>Chùa Diệu Pháp - Long Thành - Đồng Nai - 22/04/2013 22:40</li>
+          <li>Mái ấm Linh Quang - Xuân Lộc - Đồng Nai - 22/04/2013 21:57</li>
+          <li>Chùa Diệu Pháp - Long Thành - Đồng Nai - 22/04/2013 22:40</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const map_icons = document.querySelectorAll(".map-icon");
+  const map_popup = document.querySelector(".map-popup");
+  const map_popup_exit = document.querySelector(".map-modal-exit");
+
+  for (i = 0; i < map_icons.length; i++) {
+    map_icons[i].addEventListener("click", () => {
+      map_popup.classList.add("open");
+    });
+  }
+
+  map_popup_exit.addEventListener("click", () => {
+    map_popup.classList.remove("open");
+  });
+</script>
+<%- include('./partials/footer.ejs') %>
