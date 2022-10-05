@@ -1,58 +1,53 @@
 <%- include('./partials/header.ejs') %>
 <section id="sec1">
   <div class="sec1-content">
-    <p class="sologan">Giving Love And Receiving Smiles</p>
-    <p class="sec1-header1">Charity Donate</p>
-    <p class="sec1-header2">Help</p>
+    <!-- <p class="sologan">Giving Love And Receiving Smiles</p> -->
+    <p class="sec1-header1">Zero Hunger</p>
+    <!-- <p class="sec1-header2">Help</p> -->
     <p class="text">
-      Help us improve the lives of people affected by poverty, covid-19, war and
-      disasters by giving food, clean water, healthcare, education and
-      livelihoods.
+      Xóa đói, bảo đảm an ninh lương thực, cải thiện dinh dưỡng và thúc đẩy phát
+      triển nông nghiệp bền vững
     </p>
     <button class="sec1-btn grow">ĐĂNG KÝ NGAY</button>
   </div>
 </section>
 <section class="sec2">
-  <div class="row">
+  <div class="row text-center">
     <div class="col-3">
       <div class="row flex-st">
         <div class="sec2-img">
-          <img src="/img/fundraise.png" alt="FUNDRAISE" />
+          <!-- <img src="/img/fundraise.png" alt="FUNDRAISE" /> -->
         </div>
         <div class="sec2-content">
-          <div class="sec2-content-header">FUNDRAISE</div>
-          <div class="sec2-content-text">
-            Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc"
-          </div>
-          <div class="sec2-btn grow">Chương Trình</div>
+          <div class="sec2-content-header">829 triệu</div>
+          <div class="sec2-content-text">người chết đói</div>
+          <!-- <div class="sec2-btn grow">Chương Trình</div> -->
         </div>
       </div>
     </div>
     <div class="col-3">
       <div class="row flex-st">
         <div class="sec2-img">
-          <img src="/img/volunteer.png" alt="volunteer" />
+          <!-- <img src="/img/volunteer.png" alt="volunteer" /> -->
         </div>
         <div class="sec2-content">
-          <div class="sec2-content-header">VOLUNTEER</div>
+          <div class="sec2-content-header">25%</div>
           <div class="sec2-content-text">
-            Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc"
+            trẻ em suy dinh dưỡng có cơ hội tiếp cận điều kiện sống tốt hơn
           </div>
-          <div class="sec2-btn grow">Chương Trình</div>
+          <!-- <div class="sec2-btn grow">Chương Trình</div> -->
         </div>
       </div>
     </div>
     <div class="col-3">
       <div class="row flex-st">
         <div class="sec2-img">
-          <img src="/img/donate.png" alt="DONATE" />
+          <!-- <img src="/img/donate.png" alt="DONATE" /> -->
         </div>
         <div class="sec2-content">
-          <div class="sec2-content-header">DONATE</div>
-          <div class="sec2-content-text">
-            Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc"
-          </div>
-          <div class="sec2-btn grow">Chương Trình</div>
+          <div class="sec2-content-header">14 triệu</div>
+          <div class="sec2-content-text">trẻ em suy dinh dưỡng</div>
+          <!-- <div class="sec2-btn grow">Chương Trình</div>   -->
         </div>
       </div>
     </div>
@@ -60,20 +55,20 @@
 </section>
 <section class="sec3">
   <div class="upper">
-    <div class="sec-header">OUT CAUSE</div>
+    <div class="sec-header">ĐỜI SỐNG - SỨC KHỎE</div>
     <div class="sec-sologan">
       Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một niềm
       tin về hạnh phúc"
     </div>
   </div>
   <div class="sec3-content">
-    <div class="row">
+    <div class="row flex-st">
       <div class="col-3">
         <div class="sec3-img grow">
-          <a href="/news/show">
-            <img src="/img/sec3-img1.png" alt="anh 1" />
+          <a href="/news/<%= result[0].id %> ">
+            <img src="<%= result[0].thumb_nail %> " alt="anh 1" />
             <div class="sec3-img-hover">
-              <div class="sec3-img-header">Who We Are Out Cause</div>
+              <div class="sec3-img-header"><%= result[0].header %></div>
               <div class="sec3-img-content">
                 <div class="row">
                   <div class="sec3-like">
@@ -90,25 +85,21 @@
           </a>
         </div>
         <div class="sec3-lower">
-          <a href="/news/show">
-            <div class="sec3-header grow">Who We Are Out Cause</div>
+          <a href="/news/<%= result[0].id %> ">
+            <div class="sec3-header grow"><%= result[0].header %></div>
           </a>
-          <div class="sec3-text">
-            We’ve read about wars in our history books and have seen far too
-            many of them through our TV screens and phones. Unfortunately, wars
-            are not yet a thing of…
-          </div>
-          <a href="/news/show">
+          <div class="sec3-text"><%= result[0].preview_text %></div>
+          <a href="/news/<%= result[0].id %> ">
             <div class="sec3-btn grow">See more...</div>
           </a>
         </div>
       </div>
       <div class="col-3">
         <div class="sec3-img grow">
-          <a href="/news/show">
-            <img src="/img/sec3-img2.png" alt="anh 2" />
+          <a href="/news/<%= result[7].id %> ">
+            <img src="<%= result[7].thumb_nail %> " alt="anh 2" />
             <div class="sec3-img-hover">
-              <div class="sec3-img-header">Who We Are Out Cause</div>
+              <div class="sec3-img-header"><%= result[7].header %></div>
               <div class="sec3-img-content">
                 <div class="row">
                   <div class="sec3-like">
@@ -125,25 +116,21 @@
           </a>
         </div>
         <div class="sec3-lower">
-          <a href="/news/show">
-            <div class="sec3-header grow">Who We Are Out Cause</div>
+          <a href="/news/<%= result[7].id %> ">
+            <div class="sec3-header grow"><%= result[7].header %></div>
           </a>
-          <div class="sec3-text">
-            We’ve read about wars in our history books and have seen far too
-            many of them through our TV screens and phones. Unfortunately, wars
-            are not yet a thing of…
-          </div>
-          <a href="/news/show">
+          <div class="sec3-text"><%= result[7].preview_text %></div>
+          <a href="/news/<%= result[7].id %> ">
             <div class="sec3-btn grow">See more...</div>
           </a>
         </div>
       </div>
       <div class="col-3">
         <div class="sec3-img grow">
-          <a href="/news/show">
-            <img src="/img/sec3-img3.png" alt="anh 3" />
+          <a href="/news/<%= result[4].id %> ">
+            <img src="<%= result[4].thumb_nail %> " alt="anh 3" />
             <div class="sec3-img-hover">
-              <div class="sec3-img-header">Who We Are Out Cause</div>
+              <div class="sec3-img-header"><%= result[4].header %></div>
               <div class="sec3-img-content">
                 <div class="row">
                   <div class="sec3-like">
@@ -160,15 +147,11 @@
           </a>
         </div>
         <div class="sec3-lower">
-          <a href="/news/show">
-            <div class="sec3-header grow">Who We Are Out Cause</div>
+          <a href="/news/<%= result[4].id %> ">
+            <div class="sec3-header grow"><%= result[4].header %></div>
           </a>
-          <div class="sec3-text">
-            We’ve read about wars in our history books and have seen far too
-            many of them through our TV screens and phones. Unfortunately, wars
-            are not yet a thing of…
-          </div>
-          <a href="/news/show">
+          <div class="sec3-text"><%= result[4].preview_text %></div>
+          <a href="/news/<%= result[4].id %> ">
             <div class="sec3-btn grow">See more...</div>
           </a>
         </div>
@@ -253,97 +236,20 @@
     </div>
   </div>
 </section>
-<section class="sec6">
-  <div class="upper">
-    <div class="sec-header">OUT MISSSON</div>
-    <div class="sec-sologan">
-      Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một niềm
-      tin về hạnh phúc"
-    </div>
-  </div>
-  <div class="row mt-30 p-30">
-    <div class="col-4 bg-gray m-5 flex-center-col d-flex pb-30 mb-30 pos-re">
-      <div class="sec6-header mt-30">Water sourcing</div>
-      <div class="sec6-img"><img src="/img/sec6-img.png" alt="" /></div>
-      <div class="sec6-text p-20">
-        Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một
-        niềm tin về hạnh phúc"
-      </div>
-      <div class="sec6-btn grow">See more</div>
-    </div>
-    <div class="col-4 bg-gray m-5 flex-center-col d-flex pb-30 mb-30 pos-re">
-      <div class="sec6-header mt-30">Research</div>
-      <div class="sec6-img"><img src="/img/sec6-img.png" alt="" /></div>
-      <div class="sec6-text p-20">
-        Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một
-        niềm tin về hạnh phúc"
-      </div>
-      <div class="sec6-btn grow">See more</div>
-    </div>
-    <div class="col-4 bg-gray m-5 flex-center-col d-flex pb-30 mb-30 pos-re">
-      <div class="sec6-header mt-30">Education</div>
-      <div class="sec6-img"><img src="/img/sec6-img.png" alt="" /></div>
-      <div class="sec6-text p-20">
-        Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một
-        niềm tin về hạnh phúc"
-      </div>
-      <div class="sec6-btn grow">See more</div>
-    </div>
-    <div class="col-4 bg-gray m-5 flex-center-col d-flex pb-30 mb-30 pos-re">
-      <div class="sec6-header mt-30">Renewables</div>
-      <div class="sec6-img"><img src="/img/sec6-img.png" alt="" /></div>
-      <div class="sec6-text p-20">
-        Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một
-        niềm tin về hạnh phúc"
-      </div>
-      <div class="sec6-btn grow">See more</div>
-    </div>
-  </div>
-</section>
-<section class="sec7 pos-re">
-  <div class="sec7-header">HOW CAN YOU HELP US</div>
-  <div class="sec7-slogan mb-30">
-    4 Meaningful Ways to Help Others in the New Year NUTRITION, HEALTH AND
-    WELLNESS
-  </div>
-  <div class="row w-70 pos-re sec7-lower">
-    <div class="col-4 sec7-item d-flex flex-center-col p-30">
-      <div class="sec7-header1">Best In Touch</div>
-      <div class="sec7-content">Offer Kindness Proactively</div>
-      <div class="sec7-btn grow">See more</div>
-    </div>
-    <div class="col-4 sec7-item d-flex flex-center-col p-30">
-      <div class="sec7-header1">Be An Ambassador</div>
-      <div class="sec7-content">Donate to a Cause</div>
-      <div class="sec7-btn grow">See more</div>
-    </div>
-    <div class="col-4 sec7-item d-flex flex-center-col p-30">
-      <div class="sec7-header1">Host An Event</div>
-      <div class="sec7-content">Donate Unused Items</div>
-      <div class="sec7-btn grow">See more</div>
-    </div>
-    <div class="col-4 sec7-item d-flex flex-center-col p-30">
-      <div class="sec7-header1">Become Volunteer</div>
-      <div class="sec7-content">Volunteer Your Time</div>
-      <div class="sec7-btn grow">See more</div>
-    </div>
-  </div>
-</section>
+
 <section class="sec8 row mb-30">
   <div class="sec8-content col-2">
-    <div class="sec8-header pb-30">Who are you?</div>
-    <div class="sec8-text pb-30">
-      Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một niềm
-      tin về hạnh phúc"
+    <div class="sec8-header pb-30">Vậy Zero Hunger là gì?</div>
+    <div class="zero-hunger-icon grow">
+      <a href="https://www.globalgoals.org/goals/2-zero-hunger/">
+        <img src="/img/sec8-1-img.png" alt="" />
+      </a>
     </div>
-    <div class="sec8-text">
-      Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh phúc" "Vì một niềm
-      tin về hạnh phúc" Chương trình gây quỹ từ thiện "Vì một niềm tin về hạnh
-      phúc"
-    </div>
-    <div class="sec8-btn grow">See more</div>
   </div>
-  <div class="sec8-img col-2"><img src="/img/sec8-img.png" alt="" /></div>
+  <div class="sec8-img col-2 p-20 pos-re">
+    <img src="/img/sec8-img.png" alt="" />
+    <div class="pos-ab c-white img-text">Who are we?</div>
+  </div>
 </section>
 <section class="sec9">
   <div class="row">

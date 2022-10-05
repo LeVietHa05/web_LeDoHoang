@@ -21,16 +21,19 @@
   margin: 0px 120px;
   position: relative;
 }
-.upper-header::after {
+/* .upper-header::after {
   content: "";
   display: block;
   position: absolute;
   width: calc(100% + 240px);
+  width: 240px;
   height: 2px;
   background-color: rgb(221, 221, 221);
   bottom: 2px;
   left: -120px;
-}
+  right: -48px;
+} */
+
 
 .header-contact-number {
   color: #29abe2;
@@ -53,6 +56,7 @@
 
 .login-sign-up {
   cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .login {
